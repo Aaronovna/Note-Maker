@@ -1,0 +1,230 @@
+*{
+    font-size: 25px;
+    font-family: 'Century Gothic';
+    color: White;
+    margin: 5px;
+    padding: 0;
+    /* outline: 1px solid black; */
+}
+
+.box-shad{
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.45);
+}
+
+.center{
+    justify-self: center;
+    text-align: center;
+}
+
+html{
+    margin: 0px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(background.jpg);
+}
+
+h1{
+    text-shadow: 0px 0px 5px black;
+}
+
+hr{
+    border: 1px solid white;
+    border-radius: 1px;
+}
+
+body{
+    width: 98%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea{
+    padding: 5px;
+    height: 450px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: black;
+    resize: vertical;
+}
+
+input[type=text]{
+    width: 85%;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+}
+
+svg{
+    fill: white;
+}
+
+button{
+    background-color: rgb(40, 134, 216);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+button:hover{
+    background-color: rgb(21, 101, 172);
+}
+
+button.action{
+    width: 40%;
+    height: 80%;
+    background-color: rgb(40, 134, 216);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.action:hover{
+    background-color: rgb(21, 101, 172);
+}
+
+div.flex-container-col{
+    display: flex;
+    flex-direction: column;
+}
+
+div.flex-container-row{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    background-color:rgba(20, 77, 126, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+div.card{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color:rgba(20, 77, 126, 0.25);
+}
+
+div.note-card{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+    background-color:rgba(29, 69, 85, 0.3);
+}
+
+div.note-card>p{
+    font-size: 16px;
+    text-align: justify;
+}
+
+div.lbl-tf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.act-container{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+div.footer{
+    width: 90%;
+    text-shadow: 0px 0px 5px black;
+}
+
+.w50{
+    width: 50%;
+}
+
+.center{
+    justify-self: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 720px) {
+    div.flex-container-row{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .w50{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    div.note-card{
+        width: 95%;
+    }
+}
+
+/* @media screen and (max-height: 1020px) {
+    div.flex-container-row{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+} */
+
+/* The Modal (background) */
+.modal {
+    margin: 0px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color:rgba(255, 255, 255, 0.4);
+}
+  
+/* Modal Content */
+.modal-content {
+display: flex;
+flex-direction: column;
+height: auto;
+border-radius: 20px;
+background-color:rgba(20, 77, 126, 0.800);
+position: relative;
+margin: auto;
+padding: 0;
+border: 1px solid #888;
+width: 60%;
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+.modal-body {padding: 2px 16px;}
