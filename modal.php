@@ -1,5 +1,9 @@
 <?php
+//include 'connection.php';
+include 'updateNote.php';
+
 function modal($title, $description, $componentId) {
+
     return "
     <!-- The Modal -->
     <div id=\"myModal_$componentId\" class=\"modal\">
@@ -10,13 +14,14 @@ function modal($title, $description, $componentId) {
             <h1>Edit Note</h1>
             </div>
             <div class=\"modal-body\">
-                <form action=\"\">
+                <form method=\"POST\" action=\"updateNote.php\">
+                <input type=\"hidden\" name=\"mfhd\" value=\"$componentId\">
                     <div class=\"lbl-tf\">
-                        <label for=\"Title\">Title</label>
-                        <input type=\"text\" id=\"Title\" value=\"$title\">
+                        <label for=\"mft$componentId\">Title</label>
+                        <input type=\"text\" id=\"mft$componentId\" value=\"$title\" name=\"mftext$componentId\">
                     </div>
                     <div class=\"flex-container-col\">
-                        <textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\">$description</textarea>
+                        <textarea name=\"mftextarea$componentId\" id=\"\" cols=\"30\" rows=\"10\">$description</textarea>
                         <div class=\"act-container\">
                         <button class=\"action box-shad\" id=\"myBtn_$componentId\">
                             <svg height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\">

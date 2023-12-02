@@ -7,6 +7,10 @@
     /* outline: 1px solid black; */
 }
 
+form.hiddenform{
+    margin: 0px;
+}
+
 .box-shad{
     box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.45);
 }
@@ -14,6 +18,14 @@
 .center{
     justify-self: center;
     text-align: center;
+}
+
+.notif{
+    font-size: smaller;
+    font-style: italic;
+    padding: 2px;
+    background-color: cadetblue;
+    border-radius: 10px;
 }
 
 html{
@@ -150,6 +162,12 @@ div.act-container{
 div.footer{
     width: 90%;
     text-shadow: 0px 0px 5px black;
+}
+
+span.error p{
+    margin: 0px;
+    color: red;
+    font-size: smaller;
 }
 
 .w50{
