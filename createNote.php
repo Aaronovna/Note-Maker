@@ -5,7 +5,8 @@
     $title = $description = "";
     $titleErr = $descriptionErr = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
         if (empty($_POST["title"])) {
             $titleErr = "Title is required!";
         }
@@ -22,17 +23,17 @@
 
     }
 
-    if ($titleErr || $descriptionErr) {
-        // Set error messages in session
+    if ($titleErr || $descriptionErr)
+    {
         $_SESSION['titleErr'] = $titleErr;
         $_SESSION['descriptionErr'] = $descriptionErr;
 
-        // Redirect back to index.php
         header("Location: index.php");
         exit;
     }
 
-    if ($title && $description) {
+    if ($title && $description)
+    {
         $query = mysqli_query($connect, "INSERT INTO notes_tbl(title, description) 
         VALUES('$title', '$description')");
 

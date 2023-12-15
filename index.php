@@ -2,7 +2,6 @@
     include 'modal.php';
     include 'createNote.php';
     include 'updateNote.php';
-    //include 'notecard.php';
     
     $titleErr = isset($_SESSION['titleErr']) ? $_SESSION['titleErr'] : "";
     $descriptionErr = isset($_SESSION['descriptionErr']) ? $_SESSION['descriptionErr'] : "";
@@ -11,7 +10,8 @@
 
     $status = checkcon();
 
-    function noteCard($title, $description, $componentId) {
+    function noteCard($title, $description, $componentId)
+    {
         return "
             <div class=\"note-card box-shad\">
                 <p>$title</p>
@@ -77,11 +77,13 @@
                     $noteQuery = "SELECT * FROM notes_tbl";
                     $result= $connect->query($noteQuery);
 
-                    if ($result->num_rows==0) {
+                    if ($result->num_rows==0)
+                    {
                         echo '<p>No Notes Recorded</p>';
                     }
                     else{
-                        for ( $x=0; $x<$result->num_rows;$x++) { 
+                        for ( $x=0; $x<$result->num_rows;$x++)
+                        { 
                             $row = $result->fetch_assoc();
                             $noteID = $row["id"];
                             $noteTitle = $row["title"];
@@ -105,8 +107,10 @@
         $noteQuery = "SELECT * FROM notes_tbl";
         $result= $connect->query($noteQuery);
 
-        if (!($result->num_rows==0)) {
-            for ( $x=0; $x<$result->num_rows;$x++) { 
+        if (!($result->num_rows==0))
+        {
+            for ( $x=0; $x<$result->num_rows;$x++)
+            { 
                 $row = $result->fetch_assoc();
                 $noteID = $row["id"];
                 $noteTitle = $row["title"];

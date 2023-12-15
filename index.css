@@ -196,14 +196,6 @@ span.error p{
     }
 }
 
-/* @media screen and (max-height: 1020px) {
-    div.flex-container-row{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-} */
-
-/* The Modal (background) */
 .modal {
     margin: 0px;
     display: none;
@@ -215,8 +207,7 @@ span.error p{
     height: 100%; 
     background-color:rgba(255, 255, 255, 0.4);
 }
-  
-/* Modal Content */
+
 .modal-content {
 display: flex;
 flex-direction: column;
@@ -234,7 +225,6 @@ animation-name: animatetop;
 animation-duration: 0.4s;
 }
 
-/* Add Animation */
 @-webkit-keyframes animatetop {
 from {top:-300px; opacity:0} 
 to {top:0; opacity:1}

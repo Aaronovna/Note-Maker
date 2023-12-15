@@ -1,5 +1,6 @@
 <?php
     include_once 'connection.php';
+    
     $id = "";
     $eTitle = "";
     $eDescription = "";
@@ -9,7 +10,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (empty($_POST['mfhd'])) {
-            # code...
+            //Modal form hidden field
         }
         else {
             $id = $_POST['mfhd'];
